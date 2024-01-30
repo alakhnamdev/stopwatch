@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    font-weight: 800;
+    color: #393939;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fb;
+}
+
+#stopwatch {
+    padding: 5em 2em;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: min(90%, 32em);
+    background-color: #f8f9fb;
+}
+
+#clock {
+    background: #393939;
+    color: #f8f9fb;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.514);
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5em;
+    font-family: "Roboto Mono", monospace;
+    width: 90%;
+    justify-content: space-around;
+    height: 2em;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    background-color: #f8f9fb;
+    margin: 0 1em;
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #393939;
+    color: #f8f9fb;
+    transition: all 0.3s;
+}
+
+#lap,
+#heading {
+    display: none;
+}
+
+#lapRec {
+    display: none;
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+    min-height: 7em;
+    max-height: 7em;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width:565px) {
+    #controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 0.75em;
+    }
+
+    #clock {
+        margin-bottom: 0.5em;
+    }
+
+    #stopwatch {
+        padding: 3em 1em;
+    }
+}
+
+@media only screen and (max-width:475px) {
+    #clock {
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width:335px) {
+    #clock {
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width:265px) {
+    #clock {
+        font-size: 1em;
+    }
+}
